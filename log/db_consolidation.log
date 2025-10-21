@@ -1,0 +1,11 @@
+2025-01-10 20:00:00 - INFO - Sistema de consolidación iniciado
+2025-01-10 20:00:01 - INFO - Configuración de bases de datos cargada
+2025-01-10 20:00:02 - INFO - Servicio web iniciado en puerto 5001
+2025-10-16 11:29:10,999 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-10-16 11:29:10,999 - INFO - Cargados 0 inserts fallidos
+2025-10-16 11:29:10,999 - INFO - Procesando fuente: origen_restaurante
+2025-10-16 11:29:11,195 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-10-16 11:29:19,986 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-10-16 11:29:19,986 - INFO - Cargados 0 inserts fallidos
+2025-10-16 11:29:19,986 - INFO - Procesando fuente: origen_restaurante
+2025-10-16 11:29:20,094 - INFO - Snapshot guardado con 1 fuentes de datos

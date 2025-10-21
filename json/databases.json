@@ -1,0 +1,35 @@
+{
+    "db_destinos": [
+        {
+            "alias": "destino_restaurante",
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "restaurante_unificado"
+        }
+    ],
+    "db_origenes": [
+        {
+            "alias": "origen_restaurante",
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "restaurante",
+            "consolidation_status": {
+                "status": "aperturado",
+                "timestamp": "2025-09-22T00:24:28.405079"
+            }
+        },
+        {
+            "alias": "origen_restaurante_2",
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "restaurante_2",
+            "consolidation_status": {
+                "status": "aperturado",
+                "timestamp": "2025-09-22T00:24:28.405079"
+            }
+        }
+    ]
+}

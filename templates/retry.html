@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retry - Volcado Web</title>
+    <link rel="stylesheet" href="{{ url_for('serve_assets', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Consolidor de Bases de Datos</h1>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Consolidar</a>
+                <a href="/retry" class="nav-link active">Retry</a>
+                <a href="/scheduled" class="nav-link">Programado</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h3>Inserts Fallidos</h3>
+                <div id="failed_inserts_container" class="failed-inserts-container">
+                    <div id="failed_inserts_list" class="failed-inserts-list">
+                        <p>Cargando inserts fallidos...</p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="btn_retry" class="btn btn-warning" onclick="ejecutarRetry()">
+                        Reintentar Inserts
+                    </button>
+                    <button id="btn_refresh" class="btn btn-secondary" onclick="cargarInsertsFallidos()">
+                        Actualizar Lista
+                    </button>
+                </div>
+            </div>
+
+            <div class="logs-section">
+                <h3>Registro de Actividad - Retry</h3>
+                <div id="logs_content" class="logs-content">
+                    <p>Esperando operaciones de retry...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('serve_assets', filename='retry.js') }}"></script>
+</body>
+
+</html>

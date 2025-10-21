@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcado Web - Database Consolidation System</title>
+    <link rel="stylesheet" href="{{ url_for('serve_assets', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Consolidor de Bases de Datos</h1>
+            <nav class="main-nav">
+                <a href="/" class="nav-link active">Consolidar</a>
+                <a href="/retry" class="nav-link">Retry</a>
+                <a href="/scheduled" class="nav-link">Programado</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h3>Configuración de Base de Datos</h3>
+                
+                <div class="form-group">
+                    <label for="db_origen_select">Base de datos de origen:</label>
+                    <select id="db_origen_select" class="form-control">
+                        <option value="">-- Seleccionar base de origen --</option>
+                    </select>
+                    
+                    <label for="db_password_origen">Contraseña del origen:</label>
+                    <input type="password" id="db_password_origen" class="form-control" placeholder="Dejar vacío si no tiene contraseña">
+                </div>
+
+                <div class="form-group">
+                    <label for="db_destino_select">Base de datos de destino:</label>
+                    <select id="db_destino_select" class="form-control">
+                        <option value="">-- Seleccionar base de destino --</option>
+                    </select>
+                    
+                    <label for="db_password_destino">Contraseña del destino:</label>
+                    <input type="password" id="db_password_destino" class="form-control" placeholder="Dejar vacío si no tiene contraseña">
+                </div>
+
+                <div class="button-group">
+                    <button id="btn_apertura" class="btn btn-primary" onclick="confirmarApertura()">
+                        Apertura (Snapshot)
+                    </button>
+                    <button id="btn_cierre" class="btn btn-success" onclick="confirmarCierre()">
+                        Cierre (Consolidar)
+                    </button>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <h3>Estado Actual</h3>
+                <div id="status_info" class="status-info">
+                    <div class="status-item">
+                        <span class="status-label">Base de datos:</span>
+                        <span id="current_database" class="status-value">-</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Estado:</span>
+                        <span id="current_status" class="status-value">Cargando...</span>
+                    </div>
+                    <div class="status-item" style="display:none;">
+                        <span class="status-label">Última acción:</span>
+                        <span id="last_action" class="status-value">-</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Hora:</span>
+                        <span id="last_action_time" class="status-value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logs-section">
+                <h3>Registro de Actividad</h3>
+                <div id="logs_content" class="logs-content">
+                    <p>Esperando operaciones...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Confirmar Acción</h3>
+            <p id="modalMessage">¿Está seguro que desea realizar esta acción?</p>
+            <div class="modal-buttons">
+                <button id="confirmBtn" class="btn btn-danger">Confirmar</button>
+                <button id="cancelBtn" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('serve_assets', filename='scripts.js') }}"></script>  
+</body>
+
+</html>

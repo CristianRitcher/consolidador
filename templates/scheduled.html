@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programado - Volcado Web</title>
+    <link rel="stylesheet" href="{{ url_for('serve_assets', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Consolidor de Bases de Datos</h1>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Consolidar</a>
+                <a href="/retry" class="nav-link">Retry</a>
+                <a href="/scheduled" class="nav-link active">Programado</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h3>Configuración de Tarea Programada</h3>
+                
+                <div class="form-group">
+                    <label for="scheduled_db_origen">Base de datos de origen:</label>
+                    <select id="scheduled_db_origen" class="form-control">
+                        <option value="">-- Seleccionar base de origen --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="scheduled_db_destino">Base de datos de destino:</label>
+                    <select id="scheduled_db_destino" class="form-control">
+                        <option value="">-- Seleccionar base de destino --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="scheduled_modo">Modo:</label>
+                    <select id="scheduled_modo" class="form-control">
+                        <option value="">-- Seleccionar modo --</option>
+                        <option value="apertura">Apertura (Snapshot)</option>
+                        <option value="cierre">Cierre (Consolidar)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="scheduled_recurrencia">Recurrencia:</label>
+                    <select id="scheduled_recurrencia" class="form-control" onchange="toggleRecurrenciaOptions()">
+                        <option value="">-- Seleccionar recurrencia --</option>
+                        <option value="unico">Único</option>
+                        <option value="recurrente">Recurrente</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="fecha_container">
+                    <label for="scheduled_fecha">Fecha y hora:</label>
+                    <input type="datetime-local" id="scheduled_fecha" class="form-control">
+                </div>
+
+                <div class="form-group" id="concurrencia_container" style="display: none;">
+                    <label for="scheduled_concurrencia">Concurrencia (días):</label>
+                    <input type="number" id="scheduled_concurrencia" class="form-control" min="1" value="1" placeholder="Número de días entre ejecuciones">
+                </div>
+
+                <div class="button-group">
+                    <button id="btn_schedule" class="btn btn-primary" onclick="programarTarea()">
+                        Programar Tarea
+                    </button>
+                    <button id="btn_clear" class="btn btn-secondary" onclick="limpiarFormulario()">
+                        Limpiar
+                    </button>
+                </div>
+            </div>
+
+            <div class="scheduled-tasks-section">
+                <h3>Tareas Programadas</h3>
+                <div id="scheduled_tasks_list" class="scheduled-tasks-list">
+                    <p>Cargando tareas programadas...</p>
+                </div>
+            </div>
+
+            <div class="logs-section">
+                <h3>Registro de Actividad - Programado</h3>
+                <div id="logs_content" class="logs-content">
+                    <p>Esperando operaciones...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('serve_assets', filename='scheduled.js') }}"></script>
+</body>
+
+</html>
