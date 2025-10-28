@@ -5,27 +5,55 @@
             "host": "localhost",
             "user": "root",
             "password": "",
-            "database": "restaurante_unificado"
+            "database": "restaurante_unificado",
+            "port": 3306,
+            "exp": 0
+        },
+        {
+            "alias": "destino_restaurante2",
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "restaurante_unificado2",
+            "port": 3306,
+            "exp": 0
         }
     ],
     "db_origenes": [
         {
-            "alias": "origen_restaurante",
+            "alias": "restaurante",
             "host": "localhost",
             "user": "root",
             "password": "",
             "database": "restaurante",
+            "port": 3306,
+            "exp": 1,
             "consolidation_status": {
                 "status": "aperturado",
                 "timestamp": "2025-09-22T00:24:28.405079"
             }
         },
         {
-            "alias": "origen_restaurante_2",
+            "alias": "rrestaurante_espejo",
             "host": "localhost",
             "user": "root",
             "password": "",
-            "database": "restaurante_2",
+            "database": "restaurante_espejo",
+            "port": 3306,
+            "exp": 2,
+            "consolidation_status": {
+                "status": "aperturado",
+                "timestamp": "2025-09-22T00:24:28.405079"
+            }
+        },
+        {
+            "alias": "restaurante_cdis",
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "restaurante_cdi",
+            "port": 3306,
+            "exp": 0,
             "consolidation_status": {
                 "status": "aperturado",
                 "timestamp": "2025-09-22T00:24:28.405079"

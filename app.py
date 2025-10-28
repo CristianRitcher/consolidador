@@ -46,10 +46,6 @@ def serve_static(filename):
 
 @app.route('/api/sync_db', methods=['POST'])
 def sync_database():
-    """
-    Main API endpoint for database synchronization
-    Replaces the PHP api.php functionality
-    """
     try:
         # Get JSON data from request
         data = request.get_json()
@@ -102,16 +98,23 @@ def sync_database():
         db_origen_host = db_origen['host']
         db_origen_user = db_origen['user']
         db_origen_database = db_origen['database']
+        db_origen_port = db_origen['port']
+        db_origen_exp = db_origen['exp']
 
         db_destino_host = db_destino['host']
         db_destino_user = db_destino['user']
         db_destino_database = db_destino['database']
-
+        db_destino_port = db_destino['port']
+        db_destino_exp = db_destino['exp']
         # Build command for sync.py
+
+       
+
+
         cmd = [
             'python3', 'sync.py',
-            f'{db_destino_host}:{db_destino_user}:{db_password_destino}:{db_destino_database}',
-            '--sources', f'{db_origen_alias}={db_origen_host}:{db_origen_user}:{db_password_origen}:{db_origen_database}',
+            f'{db_destino_host}:{db_destino_user}:{db_password_destino}:{db_destino_database}:{db_destino_exp}[:{db_destino_port}]',
+            '--sources', f'{db_origen_alias}={db_origen_host}:{db_origen_user}:{db_password_origen}:{db_origen_database}:{db_origen_exp}[:{db_origen_port}]',
             '--modo', modo
         ]
 

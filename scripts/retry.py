@@ -21,9 +21,9 @@ class Retry:
             try:
                 with open(self.log_file, 'r', encoding='utf-8') as f:
                     self.failed_inserts_log = json.load(f)
-                self.logger.info(f"Cargados {len(self.failed_inserts_log)} inserts fallidos")
+                self.logger.info("Cargados %s inserts fallidos", len(self.failed_inserts_log))
             except Exception as e:
-                self.logger.error(f"Error cargando log de fallos: {e}")
+                self.logger.error("Error cargando log de fallos: %s", str(e))
                 self.failed_inserts_log = []
         else:
             self.failed_inserts_log = []
@@ -51,7 +51,7 @@ class Retry:
             # Get target database config from databases.json
             target_config = self.get_target_config(target_db)
             if not target_config:
-                self.logger.error(f"No se encontró configuración para base de datos destino: {target_db}")
+                self.logger.error("No se encontró configuración para base de datos destino: %s", target_db)
                 failed_retries.extend(inserts)
                 continue
             
@@ -90,17 +90,17 @@ class Retry:
                         cursor.close()
                         
                         successful_retries.append(failed_insert)
-                        self.logger.info(f"Retry exitoso para {table_name} desde {source_config['alias']}")
+                        self.logger.info("Retry exitoso para %s desde %s", table_name, source_config['alias'])
                         
                     except Exception as e:
-                        self.logger.warning(f"Retry fallido para {table_name}: {e}")
+                        self.logger.warning("Retry fallido para %s: %s", table_name, str(e))
                         conn.rollback()
                         failed_retries.append(failed_insert)
                 
                 conn.close()
                 
             except Exception as e:
-                self.logger.error(f"Error conectando a base de datos destino {target_db}: {e}")
+                self.logger.error("Error conectando a base de datos destino %s: %s", target_db, str(e))
                 failed_retries.extend(inserts)
         
         # Update failed inserts log with remaining failures
@@ -112,7 +112,7 @@ class Retry:
             "failed_retries": len(failed_retries)
         }
         
-        self.logger.info(f"Retry completado: {result['successful_retries']} exitosos, {result['failed_retries']} fallidos")
+        self.logger.info("Retry completado: %s exitosos, %s fallidos", result['successful_retries'], result['failed_retries'])
         return result
     
     def get_target_config(self, target_db):
@@ -128,7 +128,7 @@ class Retry:
             
             return None
         except Exception as e:
-            self.logger.error(f"Error leyendo configuración de bases de datos: {e}")
+            self.logger.error("Error leyendo configuración de bases de datos: %s", str(e))
             return None
     
     def save_failed_inserts(self):
@@ -136,9 +136,9 @@ class Retry:
         try:
             with open(self.log_file, 'w', encoding='utf-8') as f:
                 json.dump(self.failed_inserts_log, f, indent=2, default=str)
-            self.logger.info(f"Guardados {len(self.failed_inserts_log)} inserts fallidos")
+            self.logger.info("Guardados %s inserts fallidos", len(self.failed_inserts_log))
         except Exception as e:
-            self.logger.error(f"Error guardando log de fallos: {e}")
+            self.logger.error("Error guardando log de fallos: %s", str(e))
 
 def main():
     retry = Retry()

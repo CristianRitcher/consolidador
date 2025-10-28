@@ -24,8 +24,6 @@ def main():
     print(f"Environment: {config_name}")
     print(f"Debug mode: {debug}")
     print("-" * 50)
-
-    
     
     app.run(
         host=host,
