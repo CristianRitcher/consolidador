@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ 'Editar' if db else 'Nueva' }} base de datos {{ tipo }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('serve_assets', filename='crud.css') }}"
+    />
+  </head>
+  <body>
+    <h2>{{ 'Editar' if db else 'Nueva' }} base de datos {{ tipo }}</h2>
+
+    <form method="POST">
+      <label>Alias:</label>
+      <input
+        type="text"
+        name="alias"
+        value="{{ db.alias if db else '' }}"
+        {%
+        if
+        db
+        %}readonly{%
+        endif
+        %}
+      /><br />
+
+      <label>Host:</label>
+      <input
+        type="text"
+        name="host"
+        value="{{ db.host if db else '' }}"
+      /><br />
+
+      <label>Usuario:</label>
+      <input
+        type="text"
+        name="user"
+        value="{{ db.user if db else '' }}"
+      /><br />
+
+      <label>Contraseña:</label>
+      <input
+        type="text"
+        name="password"
+        value="{{ db.password if db else '' }}"
+      /><br />
+
+      <label>Base de datos:</label>
+      <input
+        type="text"
+        name="database"
+        value="{{ db.database if db else '' }}"
+      /><br />
+
+      <label>Puerto:</label>
+      <input
+        type="number"
+        name="port"
+        value="{{ db.port if db else 3306 }}"
+      /><br />
+
+      <button type="submit">Guardar</button>
+      <a href="{{ url_for('index') }}">Cancelar</a>
+    </form>
+  </body>
+</html>

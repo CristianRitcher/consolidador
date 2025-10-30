@@ -1,10 +1,12 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, jsonify, render_template, send_from_directory, render_template, request, redirect, url_for, flash
 import subprocess
 import json
 import os
 import logging
 from pathlib import Path
 from datetime import datetime
+from scripts.encryption import encrypt_password, decrypt_password
+import json, os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -477,3 +479,128 @@ if __name__ == '__main__':
         port=5001,
         debug=True
     )
+# --- CRUD para bases de datos origen/destino ---
+
+
+
+ALIAS_PATH = "alias.json"
+
+def load_aliases():
+    """Lee alias.json y devuelve su contenido como diccionario"""
+    if not os.path.exists(ALIAS_PATH):
+        data = {"db_origenes": [], "db_destinos": []}
+        with open(ALIAS_PATH, "w") as f:
+            json.dump(data, f, indent=4)
+        return data
+    else:
+        with open(ALIAS_PATH, "r") as f:
+            return json.load(f)
+
+def save_aliases(data):
+    """Guarda los cambios en alias.json"""
+    with open(ALIAS_PATH, "w") as f:
+        json.dump(data, f, indent=4)
+
+@app.route("/db/<tipo>/manage")
+def manage_db(tipo):
+    """Página de gestión de bases (origen o destino)"""
+    data = load_aliases()
+
+    if tipo == "origen":
+        db_list = data.get("db_origenes", [])
+    elif tipo == "destino":
+        db_list = data.get("db_destinos", [])
+    else:
+        db_list = []
+
+    return render_template("manage_db.html", tipo=tipo, db_list=db_list)
+
+
+@app.route("/db/<tipo>/new", methods=["POST"])
+def new_db(tipo):
+    """Crea una nueva base y la guarda en alias.json"""
+    data = load_aliases()
+
+    
+    if tipo == "origen":
+        key = "db_origenes"
+    elif tipo == "destino":
+        key = "db_destinos"
+    else:
+        return "Tipo inválido", 400
+
+    
+    alias = request.form.get("alias")
+    host = request.form.get("host")
+    user = request.form.get("user")
+    password = encrypt_password(request.form.get("password") or "")
+    database = request.form.get("database")
+    port = request.form.get("port") or "3306"  # 🔹 Default 3306
+
+    
+    if not alias or not host or not database:
+        flash("Faltan campos obligatorios.")
+        return redirect(url_for("manage_db", tipo=tipo))
+
+   
+    all_aliases = [db["alias"] for db in data.get("db_origenes", []) + data.get("db_destinos", [])]
+    if alias in all_aliases:
+        flash(f"El alias '{alias}' ya existe. Usa otro nombre.")
+        return redirect(url_for("manage_db", tipo=tipo))
+
+    
+    nueva_db = {
+        "alias": alias,
+        "host": host,
+        "user": user,
+        "password": password,
+        "database": database,
+        "port": port,
+        "exp": 0,  
+        "consolidation_status": {"status": "abierto", "timestamp": ""}
+    }
+
+    data[key].append(nueva_db)
+    save_aliases(data)
+
+    flash(f"Base '{alias}' agregada correctamente.")
+    return redirect(url_for("manage_db", tipo=tipo))
+
+
+@app.route("/db/<tipo>/edit/<alias>", methods=["POST"])
+def edit_db(tipo, alias):
+    """Edita una base existente"""
+    data = load_aliases()
+    key = "db_origenes" if tipo == "origen" else "db_destinos"
+
+    for db in data[key]:
+        if db["alias"] == alias:
+            db["host"] = request.form.get("host")
+            db["user"] = request.form.get("user")
+            db["password"] = encrypt_password(request.form.get("password"))
+            db["database"] = request.form.get("database")
+            db["port"] = request.form.get("port")
+            break
+
+    save_aliases(data)
+    flash(f"Base '{alias}' actualizada correctamente.")
+    return redirect(url_for("manage_db", tipo=tipo))
+
+
+@app.route("/db/<tipo>/delete/<alias>", methods=["POST"])
+def delete_db(tipo, alias):
+    """Elimina una base de datos por alias"""
+    data = load_aliases()
+
+    if tipo == "origen":
+        key = "db_origenes"
+    elif tipo == "destino":
+        key = "db_destinos"
+    else:
+        return "Tipo inválido", 400
+
+    data[key] = [d for d in data[key] if d["alias"] != alias]
+    save_aliases(data)
+
+    flash(f"Base '{alias}' eliminada correctamente.")
+    return redirect(url_for("manage_db", tipo=tipo))
