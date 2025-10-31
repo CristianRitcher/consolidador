@@ -14,12 +14,14 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # Support for UTF-8 characters
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY", "tokyo_sushi_secret_key_change_in_production")  # Required for sessions (flash messages)
 
 # Configuration
 BASE_DIR = Path(__file__).parent
 ASSETS_DIR = BASE_DIR / 'assets'
 STATIC_DIR = BASE_DIR / 'static'
 TEMPLATES_DIR = BASE_DIR / 'templates'
+DATABASES_PATH = BASE_DIR / 'json' / 'databases.json'
 
 @app.route('/')
 def index():
@@ -360,12 +362,11 @@ def retry_inserts():
             "message": f"Error interno durante el retry: {str(e)}"
         }), 500
     
-
 @app.route('/api/databases', methods=['GET'])
 def get_databases():
     """Get available databases configuration from databases.json"""
     try:
-        databases_file = BASE_DIR / 'json' / 'databases.json'
+        databases_file = DATABASES_PATH
         if not databases_file.exists():
             return jsonify({
                 "status": "error",
@@ -399,7 +400,7 @@ def get_status():
 
         # Get consolidation status from databases.json
         try:
-            databases_file = BASE_DIR / 'json' / 'databases.json'
+            databases_file = DATABASES_PATH
             if databases_file.exists():
                 with open(databases_file, 'r', encoding='utf-8') as f:
                     db_data = json.load(f)
@@ -468,37 +469,22 @@ def internal_error(error):
         "message": "Error interno del servidor"
     }), 500
 
-if __name__ == '__main__':
-    # Create directories if they don't exist
-    os.makedirs(TEMPLATES_DIR, exist_ok=True)
-    os.makedirs(STATIC_DIR, exist_ok=True)
-    
-    # Run Flask development server
-    app.run(
-        host='0.0.0.0',
-        port=5001,
-        debug=True
-    )
+
 # --- CRUD para bases de datos origen/destino ---
-
-
-
-ALIAS_PATH = "alias.json"
-
 def load_aliases():
     """Lee alias.json y devuelve su contenido como diccionario"""
-    if not os.path.exists(ALIAS_PATH):
+    if not os.path.exists(DATABASES_PATH):
         data = {"db_origenes": [], "db_destinos": []}
-        with open(ALIAS_PATH, "w") as f:
+        with open(DATABASES_PATH, "w") as f:
             json.dump(data, f, indent=4)
         return data
     else:
-        with open(ALIAS_PATH, "r") as f:
+        with open(DATABASES_PATH, "r") as f:
             return json.load(f)
 
 def save_aliases(data):
     """Guarda los cambios en alias.json"""
-    with open(ALIAS_PATH, "w") as f:
+    with open(DATABASES_PATH, "w") as f:
         json.dump(data, f, indent=4)
 
 @app.route("/db/<tipo>/manage")
@@ -514,7 +500,6 @@ def manage_db(tipo):
         db_list = []
 
     return render_template("manage_db.html", tipo=tipo, db_list=db_list)
-
 
 @app.route("/db/<tipo>/new", methods=["POST"])
 def new_db(tipo):
@@ -566,7 +551,6 @@ def new_db(tipo):
     flash(f"Base '{alias}' agregada correctamente.")
     return redirect(url_for("manage_db", tipo=tipo))
 
-
 @app.route("/db/<tipo>/edit/<alias>", methods=["POST"])
 def edit_db(tipo, alias):
     """Edita una base existente"""
@@ -586,7 +570,6 @@ def edit_db(tipo, alias):
     flash(f"Base '{alias}' actualizada correctamente.")
     return redirect(url_for("manage_db", tipo=tipo))
 
-
 @app.route("/db/<tipo>/delete/<alias>", methods=["POST"])
 def delete_db(tipo, alias):
     """Elimina una base de datos por alias"""
@@ -604,3 +587,15 @@ def delete_db(tipo, alias):
 
     flash(f"Base '{alias}' eliminada correctamente.")
     return redirect(url_for("manage_db", tipo=tipo))
+
+if __name__ == '__main__':
+    # Create directories if they don't exist
+    os.makedirs(TEMPLATES_DIR, exist_ok=True)
+    os.makedirs(STATIC_DIR, exist_ok=True)
+    
+    # Run Flask development server
+    app.run(
+        host='0.0.0.0',
+        port=5001,
+        debug=True
+    )
