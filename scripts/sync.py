@@ -396,35 +396,40 @@ class MySQLDBConsolidator:
                 values = [insert_data[col] for col in columns]
 
                 if source_config['exp'] == 1:
+
                     with open(f"../json/databases.json", "r") as f:
                         data = json.load(f)
+
                     for source in data['db_origenes']:
                         if source['exp'] == 2:
                             secondary_source_conn = self.get_db_connection(source)
                             cursor = secondary_source_conn.cursor(dictionary=True)
+                        else:
+                            continue
+
                     if record['id'] is not None:
                         query = f"SELECT * FROM `{table_name}` WHERE `id` = {record['id']}"
                         cursor.execute(query)
                         result = cursor.fetchone()
                         if result:
-                            continue
-                        else:
                             query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
                             cursor.execute(query, values)
                             conn.commit()
-                            cursor.commit()
-                            cursor.close()
-                        break
+                            conn.close()
+                            successful_inserts += 1
+                        else:
+                            continue
+                        continue
                             # Verificar si el registro ya existe en la base de datos secundaria
-                           
-                query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
-                
-                cursor = conn.cursor()
-                cursor.execute(query, values)
-                conn.commit()
-                cursor.close()
-                
-                successful_inserts += 1
+                else:
+                    query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
+                    
+                    cursor = conn.cursor()
+                    cursor.execute(query, values)
+                    conn.commit()
+                    cursor.close()
+                    
+                    successful_inserts += 1
                 
             except Exception as e:
                 self.logger.warning(f"Error insertando registro en {table_name}: {e}")
