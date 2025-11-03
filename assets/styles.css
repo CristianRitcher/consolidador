@@ -87,6 +87,12 @@ main {
   gap: 15px;
   margin-top: 30px;
 }
+.button-gestion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
 
 .btn {
   flex: 1;
@@ -385,13 +391,13 @@ h3,
 }
 
 .btn-secondary {
-  background: #6c757d;
-  color: white;
+  background: lightgray;
+  color: gray;
 }
 
 .btn-secondary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+  box-shadow: 0 8px 25px rgba(138, 150, 160, 0.3);
 }
 
 @keyframes modalSlideIn {
