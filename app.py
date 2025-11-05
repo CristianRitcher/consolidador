@@ -142,6 +142,29 @@ def sync_database():
                 "message": f"Error durante la ejecución: {error_message}"
             }), 500
 
+        # If we are here, the operation was successful. Update consolidation status for the source database
+        try:
+            databases_file = DATABASES_PATH
+            if databases_file.exists():
+                with open(databases_file, 'r', encoding='utf-8') as f:
+                    databases_data = json.load(f)
+
+                db_list = databases_data.get('db_origenes', [])
+                for origen in db_list:
+                    if origen.get('alias') == db_origen_alias:
+                        if 'consolidation_status' not in origen:
+                            origen['consolidation_status'] = {}
+                        origen['consolidation_status']['status'] = 'aperturado' if modo == 'apertura' else 'cerrado'
+                        origen['consolidation_status']['timestamp'] = datetime.now().isoformat()
+                        break
+
+                with open(databases_file, 'w', encoding='utf-8') as f:
+                    json.dump(databases_data, f, indent=2)
+            else:
+                logger.warning("databases.json no existe; no se pudo actualizar consolidation_status")
+        except Exception as e:
+            logger.warning("No se pudo actualizar consolidation_status en databases.json: %s", e)
+
         # Try to parse output as JSON (sync.py should return JSON)
         try:
             output_json = json.loads(result.stdout)

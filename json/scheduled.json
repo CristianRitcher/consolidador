@@ -41,6 +41,29 @@
       "modo": "cierre",
       "concurrency": 0,
       "date_time": "2025-10-17T20:51:00.000Z"
+    },
+    {
+      "db_origen": {
+        "alias": "origen_restaurante",
+        "consolidation_status": {
+          "status": "aperturado",
+          "timestamp": "2025-09-22T00:24:28.405079"
+        },
+        "database": "restaurante",
+        "host": "localhost",
+        "password": "",
+        "user": "root"
+      },
+      "db_destino": {
+        "alias": "destino_restaurante",
+        "database": "restaurante_unificado",
+        "host": "localhost",
+        "password": "",
+        "user": "root"
+      },
+      "modo": "cierre",
+      "concurrency": 0,
+      "date_time": "2025-11-05T17:07:00.000Z"
     }
   ]
 }
