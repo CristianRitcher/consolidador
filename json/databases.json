@@ -1,35 +1,38 @@
 {
-  "db_destinos": [
-    {
-      "alias": "destino_restaurante",
-      "host": "localhost",
-      "user": "root",
-      "password": "",
-      "database": "restaurante_unificado"
-    }
-  ],
-  "db_origenes": [
-    {
-      "alias": "origen_restaurante",
-      "host": "localhost",
-      "user": "root",
-      "password": "",
-      "database": "restaurante",
-      "consolidation_status": {
-        "status": "aperturado",
-        "timestamp": "2025-11-05T11:20:59.212487"
-      }
-    },
-    {
-      "alias": "origen_restaurante_2",
-      "host": "localhost",
-      "user": "root",
-      "password": "",
-      "database": "restaurante_2",
-      "consolidation_status": {
-        "status": "aperturado",
-        "timestamp": "2025-09-22T00:24:28.405079"
-      }
-    }
-  ]
+    "db_destinos": [
+        {
+            "alias": "destino_restaurante",
+            "host": "localhost",
+            "user": "root",
+            "password": "gAAAAABpC5FRUipYBzajUs0IK0hrlAeEkBBpdGq1XgQs4rqSRAapt4Cnqtaq2tBRvPlaiFyLhXjBHtPxPvDok9MVtEYuFPLWTQ==",
+            "database": "restaurante_unificado",
+            "port": "3306"
+        }
+    ],
+    "db_origenes": [
+        {
+            "alias": "origen_restaurante",
+            "host": "localhost",
+            "user": "root",
+            "password": "gAAAAABpC5FCOIeJKfm57k_SEdTGT93A_EK_rKTOH-0snMxg4ZQ_ZwH1al0NQBRYevbxRRTSFeaFJdxOPamwH6DTaDnyy_XWgQ==",
+            "database": "restaurante",
+            "consolidation_status": {
+                "status": "aperturado",
+                "timestamp": "2025-11-05T11:20:59.212487"
+            },
+            "port": "3306"
+        },
+        {
+            "alias": "origen_restaurante_cdis",
+            "host": "localhost",
+            "user": "root",
+            "password": "gAAAAABpC5FFsPn8UufSN7rz5jLU8PwFWUAu77yr2XBYcwob3oYJmjkuPYxVuwwFcwP0tlAWQ6MytVafuP-xx4rDhKfIMfWfdg==",
+            "database": "restaurante_cdis",
+            "consolidation_status": {
+                "status": "aperturado",
+                "timestamp": "2025-09-22T00:24:28.405079"
+            },
+            "port": "3306"
+        }
+    ]
 }
