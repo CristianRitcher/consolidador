@@ -7,6 +7,7 @@ from pathlib import Path
 from datetime import datetime
 from scripts.encryption import encrypt_password, decrypt_password
 import json, os
+import threading
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -22,6 +23,9 @@ ASSETS_DIR = BASE_DIR / 'assets'
 STATIC_DIR = BASE_DIR / 'static'
 TEMPLATES_DIR = BASE_DIR / 'templates'
 DATABASES_PATH = BASE_DIR / 'json' / 'databases.json'
+
+# Scheduler thread (will be started when Flask app starts)
+_scheduler_started = False
 
 @app.route('/')
 def index():
@@ -611,10 +615,32 @@ def delete_db(tipo, alias):
     flash(f"Base '{alias}' eliminada correctamente.")
     return redirect(url_for("manage_db", tipo=tipo))
 
+def start_scheduler():
+    """Start the scheduled tasks scheduler in a background thread"""
+    global _scheduler_started
+    if _scheduler_started:
+        return
+    
+    try:
+        from scripts.scheduled import scheduled
+        scheduler_thread = threading.Thread(target=scheduled, daemon=True)
+        scheduler_thread.start()
+        _scheduler_started = True
+        logger.info("Scheduled tasks scheduler started in background thread")
+    except Exception as e:
+        logger.error(f"Error starting scheduler: {e}")
+
+# Start scheduler when app is created (works with both dev server and WSGI)
+# Use modern Flask approach - start scheduler immediately
+start_scheduler()
+
 if __name__ == '__main__':
     # Create directories if they don't exist
     os.makedirs(TEMPLATES_DIR, exist_ok=True)
     os.makedirs(STATIC_DIR, exist_ok=True)
+    
+    # Start the scheduler in background
+    start_scheduler()
     
     # Run Flask development server
     app.run(

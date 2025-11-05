@@ -227,3 +227,7 @@
 2025-11-05 11:11:04,980 - INFO - Consolidando cambios de: origen_restaurante
 2025-11-05 11:11:05,042 - INFO - Guardados 0 inserts fallidos
 2025-11-05 11:11:05,042 - INFO - Consolidación completada
+2025-11-05 11:20:59,052 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-05 11:20:59,052 - INFO - Cargados 0 inserts fallidos
+2025-11-05 11:20:59,052 - INFO - Procesando fuente: origen_restaurante
+2025-11-05 11:20:59,198 - INFO - Snapshot guardado con 1 fuentes de datos
