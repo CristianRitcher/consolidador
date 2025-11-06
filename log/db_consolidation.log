@@ -231,3 +231,556 @@
 2025-11-05 11:20:59,052 - INFO - Cargados 0 inserts fallidos
 2025-11-05 11:20:59,052 - INFO - Procesando fuente: origen_restaurante
 2025-11-05 11:20:59,198 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:00,677 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:00,677 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:00,678 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:00,807 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:04,350 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:04,350 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:04,350 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:04,461 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:07,256 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:07,256 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:07,256 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:07,352 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:15,201 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:15,201 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:15,201 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:15,318 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:18,316 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:18,316 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:18,316 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:18,429 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:43,543 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:43,543 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:43,543 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:43,657 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:35:46,226 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:35:46,226 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:35:46,226 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:35:46,339 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:37:10,442 - INFO - Iniciando consolidación de cambios...
+2025-11-06 12:37:10,447 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:37:10,523 - INFO - Creando/actualizando tabla consolidada: alineacion
+2025-11-06 12:37:10,525 - INFO - Tabla alineacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,525 - INFO - Creando/actualizando tabla consolidada: catalogo_areas
+2025-11-06 12:37:10,525 - INFO - Tabla catalogo_areas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,525 - INFO - Creando/actualizando tabla consolidada: catalogo_bancos
+2025-11-06 12:37:10,526 - INFO - Tabla catalogo_bancos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,526 - INFO - Creando/actualizando tabla consolidada: catalogo_categorias
+2025-11-06 12:37:10,526 - INFO - Tabla catalogo_categorias lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,526 - INFO - Creando/actualizando tabla consolidada: catalogo_denominaciones
+2025-11-06 12:37:10,526 - INFO - Tabla catalogo_denominaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,526 - INFO - Creando/actualizando tabla consolidada: catalogo_folios
+2025-11-06 12:37:10,526 - INFO - Tabla catalogo_folios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,526 - INFO - Creando/actualizando tabla consolidada: catalogo_promos
+2025-11-06 12:37:10,527 - INFO - Tabla catalogo_promos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,527 - INFO - Creando/actualizando tabla consolidada: catalogo_tarjetas
+2025-11-06 12:37:10,527 - INFO - Tabla catalogo_tarjetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,527 - INFO - Creando/actualizando tabla consolidada: clientes_facturacion
+2025-11-06 12:37:10,527 - INFO - Tabla clientes_facturacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,527 - INFO - Creando/actualizando tabla consolidada: conekta_events
+2025-11-06 12:37:10,527 - INFO - Tabla conekta_events lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,527 - INFO - Creando/actualizando tabla consolidada: conekta_payments
+2025-11-06 12:37:10,528 - INFO - Tabla conekta_payments lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,528 - INFO - Creando/actualizando tabla consolidada: corte_caja
+2025-11-06 12:37:10,528 - INFO - Tabla corte_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,528 - INFO - Creando/actualizando tabla consolidada: corte_caja_historial
+2025-11-06 12:37:10,528 - INFO - Tabla corte_caja_historial lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,528 - INFO - Creando/actualizando tabla consolidada: cortes_almacen
+2025-11-06 12:37:10,528 - INFO - Tabla cortes_almacen lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,528 - INFO - Creando/actualizando tabla consolidada: cortes_almacen_detalle
+2025-11-06 12:37:10,529 - INFO - Tabla cortes_almacen_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,529 - INFO - Creando/actualizando tabla consolidada: desglose_corte
+2025-11-06 12:37:10,529 - INFO - Tabla desglose_corte lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,529 - INFO - Creando/actualizando tabla consolidada: entradas_detalle
+2025-11-06 12:37:10,529 - INFO - Tabla entradas_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,529 - INFO - Creando/actualizando tabla consolidada: entradas_insumo
+2025-11-06 12:37:10,529 - INFO - Tabla entradas_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,529 - INFO - Creando/actualizando tabla consolidada: factura_detalles
+2025-11-06 12:37:10,530 - INFO - Tabla factura_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,530 - INFO - Creando/actualizando tabla consolidada: factura_tickets
+2025-11-06 12:37:10,530 - INFO - Tabla factura_tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,530 - INFO - Creando/actualizando tabla consolidada: facturas
+2025-11-06 12:37:10,530 - INFO - Tabla facturas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,530 - INFO - Creando/actualizando tabla consolidada: fondo
+2025-11-06 12:37:10,530 - INFO - Tabla fondo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,530 - INFO - Creando/actualizando tabla consolidada: horarios
+2025-11-06 12:37:10,531 - INFO - Tabla horarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,531 - INFO - Creando/actualizando tabla consolidada: insumos
+2025-11-06 12:37:10,531 - INFO - Tabla insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,531 - INFO - Creando/actualizando tabla consolidada: log_asignaciones_mesas
+2025-11-06 12:37:10,531 - INFO - Tabla log_asignaciones_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,531 - INFO - Creando/actualizando tabla consolidada: log_cancelaciones
+2025-11-06 12:37:10,531 - INFO - Tabla log_cancelaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,531 - INFO - Creando/actualizando tabla consolidada: log_mesas
+2025-11-06 12:37:10,531 - INFO - Tabla log_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,531 - INFO - Creando/actualizando tabla consolidada: logs_accion
+2025-11-06 12:37:10,532 - INFO - Tabla logs_accion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,532 - INFO - Creando/actualizando tabla consolidada: menu_dia
+2025-11-06 12:37:10,532 - INFO - Tabla menu_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,532 - INFO - Creando/actualizando tabla consolidada: mesas
+2025-11-06 12:37:10,532 - INFO - Tabla mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,532 - INFO - Creando/actualizando tabla consolidada: movimientos_caja
+2025-11-06 12:37:10,532 - INFO - Tabla movimientos_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,532 - INFO - Creando/actualizando tabla consolidada: movimientos_insumos
+2025-11-06 12:37:10,533 - INFO - Tabla movimientos_insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,533 - INFO - Creando/actualizando tabla consolidada: ofertas_dia
+2025-11-06 12:37:10,533 - INFO - Tabla ofertas_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,533 - INFO - Creando/actualizando tabla consolidada: productos
+2025-11-06 12:37:10,533 - INFO - Tabla productos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,533 - INFO - Creando/actualizando tabla consolidada: proveedores
+2025-11-06 12:37:10,533 - INFO - Tabla proveedores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,533 - INFO - Creando/actualizando tabla consolidada: qrs_insumo
+2025-11-06 12:37:10,534 - INFO - Tabla qrs_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,534 - INFO - Creando/actualizando tabla consolidada: recetas
+2025-11-06 12:37:10,534 - INFO - Tabla recetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,534 - INFO - Creando/actualizando tabla consolidada: repartidores
+2025-11-06 12:37:10,534 - INFO - Tabla repartidores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,534 - INFO - Creando/actualizando tabla consolidada: rutas
+2025-11-06 12:37:10,534 - INFO - Tabla rutas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,534 - INFO - Creando/actualizando tabla consolidada: sedes
+2025-11-06 12:37:10,535 - INFO - Tabla sedes lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,535 - INFO - Creando/actualizando tabla consolidada: ticket_descuentos
+2025-11-06 12:37:10,535 - INFO - Tabla ticket_descuentos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,535 - INFO - Creando/actualizando tabla consolidada: ticket_detalles
+2025-11-06 12:37:10,535 - INFO - Tabla ticket_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,535 - INFO - Creando/actualizando tabla consolidada: tickets
+2025-11-06 12:37:10,535 - INFO - Tabla tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,535 - INFO - Creando/actualizando tabla consolidada: usuario_ruta
+2025-11-06 12:37:10,536 - INFO - Tabla usuario_ruta lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,536 - INFO - Creando/actualizando tabla consolidada: usuarios
+2025-11-06 12:37:10,536 - INFO - Tabla usuarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,536 - INFO - Creando/actualizando tabla consolidada: venta_detalles
+2025-11-06 12:37:10,536 - INFO - Tabla venta_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,536 - INFO - Creando/actualizando tabla consolidada: venta_detalles_cancelados
+2025-11-06 12:37:10,536 - INFO - Tabla venta_detalles_cancelados lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,536 - INFO - Creando/actualizando tabla consolidada: venta_detalles_log
+2025-11-06 12:37:10,537 - INFO - Tabla venta_detalles_log lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,537 - INFO - Creando/actualizando tabla consolidada: ventas
+2025-11-06 12:37:10,537 - INFO - Tabla ventas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:10,537 - INFO - Consolidando cambios de: origen_restaurante
+2025-11-06 12:37:10,601 - INFO - Guardados 0 inserts fallidos
+2025-11-06 12:37:10,601 - INFO - Consolidación completada
+2025-11-06 12:37:23,197 - INFO - Iniciando consolidación de cambios...
+2025-11-06 12:37:23,201 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:37:23,267 - INFO - Creando/actualizando tabla consolidada: alineacion
+2025-11-06 12:37:23,268 - INFO - Tabla alineacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,268 - INFO - Creando/actualizando tabla consolidada: catalogo_areas
+2025-11-06 12:37:23,268 - INFO - Tabla catalogo_areas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,268 - INFO - Creando/actualizando tabla consolidada: catalogo_bancos
+2025-11-06 12:37:23,268 - INFO - Tabla catalogo_bancos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,268 - INFO - Creando/actualizando tabla consolidada: catalogo_categorias
+2025-11-06 12:37:23,268 - INFO - Tabla catalogo_categorias lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,268 - INFO - Creando/actualizando tabla consolidada: catalogo_denominaciones
+2025-11-06 12:37:23,269 - INFO - Tabla catalogo_denominaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,269 - INFO - Creando/actualizando tabla consolidada: catalogo_folios
+2025-11-06 12:37:23,269 - INFO - Tabla catalogo_folios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,269 - INFO - Creando/actualizando tabla consolidada: catalogo_promos
+2025-11-06 12:37:23,269 - INFO - Tabla catalogo_promos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,269 - INFO - Creando/actualizando tabla consolidada: catalogo_tarjetas
+2025-11-06 12:37:23,269 - INFO - Tabla catalogo_tarjetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,269 - INFO - Creando/actualizando tabla consolidada: clientes_facturacion
+2025-11-06 12:37:23,270 - INFO - Tabla clientes_facturacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,270 - INFO - Creando/actualizando tabla consolidada: conekta_events
+2025-11-06 12:37:23,270 - INFO - Tabla conekta_events lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,270 - INFO - Creando/actualizando tabla consolidada: conekta_payments
+2025-11-06 12:37:23,270 - INFO - Tabla conekta_payments lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,270 - INFO - Creando/actualizando tabla consolidada: corte_caja
+2025-11-06 12:37:23,270 - INFO - Tabla corte_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,270 - INFO - Creando/actualizando tabla consolidada: corte_caja_historial
+2025-11-06 12:37:23,271 - INFO - Tabla corte_caja_historial lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,271 - INFO - Creando/actualizando tabla consolidada: cortes_almacen
+2025-11-06 12:37:23,271 - INFO - Tabla cortes_almacen lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,271 - INFO - Creando/actualizando tabla consolidada: cortes_almacen_detalle
+2025-11-06 12:37:23,271 - INFO - Tabla cortes_almacen_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,271 - INFO - Creando/actualizando tabla consolidada: desglose_corte
+2025-11-06 12:37:23,271 - INFO - Tabla desglose_corte lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,271 - INFO - Creando/actualizando tabla consolidada: entradas_detalle
+2025-11-06 12:37:23,272 - INFO - Tabla entradas_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,272 - INFO - Creando/actualizando tabla consolidada: entradas_insumo
+2025-11-06 12:37:23,272 - INFO - Tabla entradas_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,272 - INFO - Creando/actualizando tabla consolidada: factura_detalles
+2025-11-06 12:37:23,272 - INFO - Tabla factura_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,272 - INFO - Creando/actualizando tabla consolidada: factura_tickets
+2025-11-06 12:37:23,272 - INFO - Tabla factura_tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,272 - INFO - Creando/actualizando tabla consolidada: facturas
+2025-11-06 12:37:23,273 - INFO - Tabla facturas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,273 - INFO - Creando/actualizando tabla consolidada: fondo
+2025-11-06 12:37:23,273 - INFO - Tabla fondo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,273 - INFO - Creando/actualizando tabla consolidada: horarios
+2025-11-06 12:37:23,273 - INFO - Tabla horarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,273 - INFO - Creando/actualizando tabla consolidada: insumos
+2025-11-06 12:37:23,273 - INFO - Tabla insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,273 - INFO - Creando/actualizando tabla consolidada: log_asignaciones_mesas
+2025-11-06 12:37:23,274 - INFO - Tabla log_asignaciones_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,274 - INFO - Creando/actualizando tabla consolidada: log_cancelaciones
+2025-11-06 12:37:23,274 - INFO - Tabla log_cancelaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,274 - INFO - Creando/actualizando tabla consolidada: log_mesas
+2025-11-06 12:37:23,274 - INFO - Tabla log_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,274 - INFO - Creando/actualizando tabla consolidada: logs_accion
+2025-11-06 12:37:23,274 - INFO - Tabla logs_accion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,274 - INFO - Creando/actualizando tabla consolidada: menu_dia
+2025-11-06 12:37:23,274 - INFO - Tabla menu_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,274 - INFO - Creando/actualizando tabla consolidada: mesas
+2025-11-06 12:37:23,275 - INFO - Tabla mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,275 - INFO - Creando/actualizando tabla consolidada: movimientos_caja
+2025-11-06 12:37:23,275 - INFO - Tabla movimientos_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,275 - INFO - Creando/actualizando tabla consolidada: movimientos_insumos
+2025-11-06 12:37:23,275 - INFO - Tabla movimientos_insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,275 - INFO - Creando/actualizando tabla consolidada: ofertas_dia
+2025-11-06 12:37:23,275 - INFO - Tabla ofertas_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,275 - INFO - Creando/actualizando tabla consolidada: productos
+2025-11-06 12:37:23,276 - INFO - Tabla productos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,276 - INFO - Creando/actualizando tabla consolidada: proveedores
+2025-11-06 12:37:23,276 - INFO - Tabla proveedores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,276 - INFO - Creando/actualizando tabla consolidada: qrs_insumo
+2025-11-06 12:37:23,276 - INFO - Tabla qrs_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,276 - INFO - Creando/actualizando tabla consolidada: recetas
+2025-11-06 12:37:23,276 - INFO - Tabla recetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,276 - INFO - Creando/actualizando tabla consolidada: repartidores
+2025-11-06 12:37:23,277 - INFO - Tabla repartidores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,277 - INFO - Creando/actualizando tabla consolidada: rutas
+2025-11-06 12:37:23,277 - INFO - Tabla rutas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,277 - INFO - Creando/actualizando tabla consolidada: sedes
+2025-11-06 12:37:23,277 - INFO - Tabla sedes lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,277 - INFO - Creando/actualizando tabla consolidada: ticket_descuentos
+2025-11-06 12:37:23,277 - INFO - Tabla ticket_descuentos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,277 - INFO - Creando/actualizando tabla consolidada: ticket_detalles
+2025-11-06 12:37:23,278 - INFO - Tabla ticket_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,278 - INFO - Creando/actualizando tabla consolidada: tickets
+2025-11-06 12:37:23,278 - INFO - Tabla tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,278 - INFO - Creando/actualizando tabla consolidada: usuario_ruta
+2025-11-06 12:37:23,278 - INFO - Tabla usuario_ruta lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,278 - INFO - Creando/actualizando tabla consolidada: usuarios
+2025-11-06 12:37:23,278 - INFO - Tabla usuarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,278 - INFO - Creando/actualizando tabla consolidada: venta_detalles
+2025-11-06 12:37:23,279 - INFO - Tabla venta_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,279 - INFO - Creando/actualizando tabla consolidada: venta_detalles_cancelados
+2025-11-06 12:37:23,279 - INFO - Tabla venta_detalles_cancelados lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,279 - INFO - Creando/actualizando tabla consolidada: venta_detalles_log
+2025-11-06 12:37:23,279 - INFO - Tabla venta_detalles_log lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,279 - INFO - Creando/actualizando tabla consolidada: ventas
+2025-11-06 12:37:23,279 - INFO - Tabla ventas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:23,280 - INFO - Consolidando cambios de: origen_restaurante
+2025-11-06 12:37:23,345 - INFO - Guardados 0 inserts fallidos
+2025-11-06 12:37:23,345 - INFO - Consolidación completada
+2025-11-06 12:37:30,154 - INFO - Iniciando consolidación de cambios...
+2025-11-06 12:37:30,158 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:37:30,222 - INFO - Creando/actualizando tabla consolidada: alineacion
+2025-11-06 12:37:30,223 - INFO - Tabla alineacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,223 - INFO - Creando/actualizando tabla consolidada: catalogo_areas
+2025-11-06 12:37:30,223 - INFO - Tabla catalogo_areas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,223 - INFO - Creando/actualizando tabla consolidada: catalogo_bancos
+2025-11-06 12:37:30,223 - INFO - Tabla catalogo_bancos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,223 - INFO - Creando/actualizando tabla consolidada: catalogo_categorias
+2025-11-06 12:37:30,224 - INFO - Tabla catalogo_categorias lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,224 - INFO - Creando/actualizando tabla consolidada: catalogo_denominaciones
+2025-11-06 12:37:30,224 - INFO - Tabla catalogo_denominaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,224 - INFO - Creando/actualizando tabla consolidada: catalogo_folios
+2025-11-06 12:37:30,224 - INFO - Tabla catalogo_folios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,224 - INFO - Creando/actualizando tabla consolidada: catalogo_promos
+2025-11-06 12:37:30,224 - INFO - Tabla catalogo_promos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,225 - INFO - Creando/actualizando tabla consolidada: catalogo_tarjetas
+2025-11-06 12:37:30,225 - INFO - Tabla catalogo_tarjetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,225 - INFO - Creando/actualizando tabla consolidada: clientes_facturacion
+2025-11-06 12:37:30,225 - INFO - Tabla clientes_facturacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,225 - INFO - Creando/actualizando tabla consolidada: conekta_events
+2025-11-06 12:37:30,225 - INFO - Tabla conekta_events lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,225 - INFO - Creando/actualizando tabla consolidada: conekta_payments
+2025-11-06 12:37:30,225 - INFO - Tabla conekta_payments lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,226 - INFO - Creando/actualizando tabla consolidada: corte_caja
+2025-11-06 12:37:30,226 - INFO - Tabla corte_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,226 - INFO - Creando/actualizando tabla consolidada: corte_caja_historial
+2025-11-06 12:37:30,226 - INFO - Tabla corte_caja_historial lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,226 - INFO - Creando/actualizando tabla consolidada: cortes_almacen
+2025-11-06 12:37:30,226 - INFO - Tabla cortes_almacen lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,226 - INFO - Creando/actualizando tabla consolidada: cortes_almacen_detalle
+2025-11-06 12:37:30,226 - INFO - Tabla cortes_almacen_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,227 - INFO - Creando/actualizando tabla consolidada: desglose_corte
+2025-11-06 12:37:30,227 - INFO - Tabla desglose_corte lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,227 - INFO - Creando/actualizando tabla consolidada: entradas_detalle
+2025-11-06 12:37:30,227 - INFO - Tabla entradas_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,227 - INFO - Creando/actualizando tabla consolidada: entradas_insumo
+2025-11-06 12:37:30,227 - INFO - Tabla entradas_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,227 - INFO - Creando/actualizando tabla consolidada: factura_detalles
+2025-11-06 12:37:30,227 - INFO - Tabla factura_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,227 - INFO - Creando/actualizando tabla consolidada: factura_tickets
+2025-11-06 12:37:30,228 - INFO - Tabla factura_tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,228 - INFO - Creando/actualizando tabla consolidada: facturas
+2025-11-06 12:37:30,228 - INFO - Tabla facturas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,228 - INFO - Creando/actualizando tabla consolidada: fondo
+2025-11-06 12:37:30,228 - INFO - Tabla fondo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,228 - INFO - Creando/actualizando tabla consolidada: horarios
+2025-11-06 12:37:30,228 - INFO - Tabla horarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,228 - INFO - Creando/actualizando tabla consolidada: insumos
+2025-11-06 12:37:30,229 - INFO - Tabla insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,229 - INFO - Creando/actualizando tabla consolidada: log_asignaciones_mesas
+2025-11-06 12:37:30,229 - INFO - Tabla log_asignaciones_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,229 - INFO - Creando/actualizando tabla consolidada: log_cancelaciones
+2025-11-06 12:37:30,229 - INFO - Tabla log_cancelaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,229 - INFO - Creando/actualizando tabla consolidada: log_mesas
+2025-11-06 12:37:30,229 - INFO - Tabla log_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,229 - INFO - Creando/actualizando tabla consolidada: logs_accion
+2025-11-06 12:37:30,230 - INFO - Tabla logs_accion lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,230 - INFO - Creando/actualizando tabla consolidada: menu_dia
+2025-11-06 12:37:30,230 - INFO - Tabla menu_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,230 - INFO - Creando/actualizando tabla consolidada: mesas
+2025-11-06 12:37:30,230 - INFO - Tabla mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,230 - INFO - Creando/actualizando tabla consolidada: movimientos_caja
+2025-11-06 12:37:30,230 - INFO - Tabla movimientos_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,230 - INFO - Creando/actualizando tabla consolidada: movimientos_insumos
+2025-11-06 12:37:30,231 - INFO - Tabla movimientos_insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,231 - INFO - Creando/actualizando tabla consolidada: ofertas_dia
+2025-11-06 12:37:30,231 - INFO - Tabla ofertas_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,231 - INFO - Creando/actualizando tabla consolidada: productos
+2025-11-06 12:37:30,231 - INFO - Tabla productos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,231 - INFO - Creando/actualizando tabla consolidada: proveedores
+2025-11-06 12:37:30,231 - INFO - Tabla proveedores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,231 - INFO - Creando/actualizando tabla consolidada: qrs_insumo
+2025-11-06 12:37:30,231 - INFO - Tabla qrs_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,231 - INFO - Creando/actualizando tabla consolidada: recetas
+2025-11-06 12:37:30,232 - INFO - Tabla recetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,232 - INFO - Creando/actualizando tabla consolidada: repartidores
+2025-11-06 12:37:30,232 - INFO - Tabla repartidores lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,232 - INFO - Creando/actualizando tabla consolidada: rutas
+2025-11-06 12:37:30,232 - INFO - Tabla rutas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,232 - INFO - Creando/actualizando tabla consolidada: sedes
+2025-11-06 12:37:30,232 - INFO - Tabla sedes lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,232 - INFO - Creando/actualizando tabla consolidada: ticket_descuentos
+2025-11-06 12:37:30,233 - INFO - Tabla ticket_descuentos lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,233 - INFO - Creando/actualizando tabla consolidada: ticket_detalles
+2025-11-06 12:37:30,233 - INFO - Tabla ticket_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,233 - INFO - Creando/actualizando tabla consolidada: tickets
+2025-11-06 12:37:30,233 - INFO - Tabla tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,233 - INFO - Creando/actualizando tabla consolidada: usuario_ruta
+2025-11-06 12:37:30,233 - INFO - Tabla usuario_ruta lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,233 - INFO - Creando/actualizando tabla consolidada: usuarios
+2025-11-06 12:37:30,234 - INFO - Tabla usuarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,234 - INFO - Creando/actualizando tabla consolidada: venta_detalles
+2025-11-06 12:37:30,234 - INFO - Tabla venta_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,234 - INFO - Creando/actualizando tabla consolidada: venta_detalles_cancelados
+2025-11-06 12:37:30,234 - INFO - Tabla venta_detalles_cancelados lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,234 - INFO - Creando/actualizando tabla consolidada: venta_detalles_log
+2025-11-06 12:37:30,234 - INFO - Tabla venta_detalles_log lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,234 - INFO - Creando/actualizando tabla consolidada: ventas
+2025-11-06 12:37:30,235 - INFO - Tabla ventas lista para consolidación desde: origen_restaurante
+2025-11-06 12:37:30,235 - INFO - Consolidando cambios de: origen_restaurante
+2025-11-06 12:37:30,297 - INFO - Guardados 0 inserts fallidos
+2025-11-06 12:37:30,297 - INFO - Consolidación completada
+2025-11-06 12:38:50,946 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:38:50,947 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:38:50,947 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:38:51,073 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:38:53,495 - INFO - Iniciando consolidación de cambios...
+2025-11-06 12:38:53,499 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:38:53,567 - INFO - Creando/actualizando tabla consolidada: alineacion
+2025-11-06 12:38:53,567 - INFO - Tabla alineacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,567 - INFO - Creando/actualizando tabla consolidada: catalogo_areas
+2025-11-06 12:38:53,568 - INFO - Tabla catalogo_areas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,568 - INFO - Creando/actualizando tabla consolidada: catalogo_bancos
+2025-11-06 12:38:53,568 - INFO - Tabla catalogo_bancos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,568 - INFO - Creando/actualizando tabla consolidada: catalogo_categorias
+2025-11-06 12:38:53,568 - INFO - Tabla catalogo_categorias lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,568 - INFO - Creando/actualizando tabla consolidada: catalogo_denominaciones
+2025-11-06 12:38:53,568 - INFO - Tabla catalogo_denominaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,569 - INFO - Creando/actualizando tabla consolidada: catalogo_folios
+2025-11-06 12:38:53,569 - INFO - Tabla catalogo_folios lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,569 - INFO - Creando/actualizando tabla consolidada: catalogo_promos
+2025-11-06 12:38:53,569 - INFO - Tabla catalogo_promos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,569 - INFO - Creando/actualizando tabla consolidada: catalogo_tarjetas
+2025-11-06 12:38:53,569 - INFO - Tabla catalogo_tarjetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,569 - INFO - Creando/actualizando tabla consolidada: clientes_facturacion
+2025-11-06 12:38:53,569 - INFO - Tabla clientes_facturacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,569 - INFO - Creando/actualizando tabla consolidada: conekta_events
+2025-11-06 12:38:53,570 - INFO - Tabla conekta_events lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,570 - INFO - Creando/actualizando tabla consolidada: conekta_payments
+2025-11-06 12:38:53,570 - INFO - Tabla conekta_payments lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,570 - INFO - Creando/actualizando tabla consolidada: corte_caja
+2025-11-06 12:38:53,570 - INFO - Tabla corte_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,570 - INFO - Creando/actualizando tabla consolidada: corte_caja_historial
+2025-11-06 12:38:53,570 - INFO - Tabla corte_caja_historial lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,570 - INFO - Creando/actualizando tabla consolidada: cortes_almacen
+2025-11-06 12:38:53,571 - INFO - Tabla cortes_almacen lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,571 - INFO - Creando/actualizando tabla consolidada: cortes_almacen_detalle
+2025-11-06 12:38:53,571 - INFO - Tabla cortes_almacen_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,571 - INFO - Creando/actualizando tabla consolidada: desglose_corte
+2025-11-06 12:38:53,571 - INFO - Tabla desglose_corte lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,571 - INFO - Creando/actualizando tabla consolidada: entradas_detalle
+2025-11-06 12:38:53,571 - INFO - Tabla entradas_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,571 - INFO - Creando/actualizando tabla consolidada: entradas_insumo
+2025-11-06 12:38:53,572 - INFO - Tabla entradas_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,572 - INFO - Creando/actualizando tabla consolidada: factura_detalles
+2025-11-06 12:38:53,572 - INFO - Tabla factura_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,572 - INFO - Creando/actualizando tabla consolidada: factura_tickets
+2025-11-06 12:38:53,572 - INFO - Tabla factura_tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,572 - INFO - Creando/actualizando tabla consolidada: facturas
+2025-11-06 12:38:53,572 - INFO - Tabla facturas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,572 - INFO - Creando/actualizando tabla consolidada: fondo
+2025-11-06 12:38:53,572 - INFO - Tabla fondo lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,572 - INFO - Creando/actualizando tabla consolidada: horarios
+2025-11-06 12:38:53,573 - INFO - Tabla horarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,573 - INFO - Creando/actualizando tabla consolidada: insumos
+2025-11-06 12:38:53,573 - INFO - Tabla insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,573 - INFO - Creando/actualizando tabla consolidada: log_asignaciones_mesas
+2025-11-06 12:38:53,573 - INFO - Tabla log_asignaciones_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,573 - INFO - Creando/actualizando tabla consolidada: log_cancelaciones
+2025-11-06 12:38:53,573 - INFO - Tabla log_cancelaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,573 - INFO - Creando/actualizando tabla consolidada: log_mesas
+2025-11-06 12:38:53,574 - INFO - Tabla log_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,574 - INFO - Creando/actualizando tabla consolidada: logs_accion
+2025-11-06 12:38:53,574 - INFO - Tabla logs_accion lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,574 - INFO - Creando/actualizando tabla consolidada: menu_dia
+2025-11-06 12:38:53,574 - INFO - Tabla menu_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,574 - INFO - Creando/actualizando tabla consolidada: mesas
+2025-11-06 12:38:53,574 - INFO - Tabla mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,574 - INFO - Creando/actualizando tabla consolidada: movimientos_caja
+2025-11-06 12:38:53,575 - INFO - Tabla movimientos_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,575 - INFO - Creando/actualizando tabla consolidada: movimientos_insumos
+2025-11-06 12:38:53,575 - INFO - Tabla movimientos_insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,575 - INFO - Creando/actualizando tabla consolidada: ofertas_dia
+2025-11-06 12:38:53,575 - INFO - Tabla ofertas_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,575 - INFO - Creando/actualizando tabla consolidada: productos
+2025-11-06 12:38:53,575 - INFO - Tabla productos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,575 - INFO - Creando/actualizando tabla consolidada: proveedores
+2025-11-06 12:38:53,576 - INFO - Tabla proveedores lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,576 - INFO - Creando/actualizando tabla consolidada: qrs_insumo
+2025-11-06 12:38:53,576 - INFO - Tabla qrs_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,576 - INFO - Creando/actualizando tabla consolidada: recetas
+2025-11-06 12:38:53,576 - INFO - Tabla recetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,576 - INFO - Creando/actualizando tabla consolidada: repartidores
+2025-11-06 12:38:53,576 - INFO - Tabla repartidores lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,576 - INFO - Creando/actualizando tabla consolidada: rutas
+2025-11-06 12:38:53,576 - INFO - Tabla rutas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,576 - INFO - Creando/actualizando tabla consolidada: sedes
+2025-11-06 12:38:53,577 - INFO - Tabla sedes lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,577 - INFO - Creando/actualizando tabla consolidada: ticket_descuentos
+2025-11-06 12:38:53,577 - INFO - Tabla ticket_descuentos lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,577 - INFO - Creando/actualizando tabla consolidada: ticket_detalles
+2025-11-06 12:38:53,577 - INFO - Tabla ticket_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,577 - INFO - Creando/actualizando tabla consolidada: tickets
+2025-11-06 12:38:53,577 - INFO - Tabla tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,577 - INFO - Creando/actualizando tabla consolidada: usuario_ruta
+2025-11-06 12:38:53,578 - INFO - Tabla usuario_ruta lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,578 - INFO - Creando/actualizando tabla consolidada: usuarios
+2025-11-06 12:38:53,578 - INFO - Tabla usuarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,578 - INFO - Creando/actualizando tabla consolidada: venta_detalles
+2025-11-06 12:38:53,578 - INFO - Tabla venta_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,578 - INFO - Creando/actualizando tabla consolidada: venta_detalles_cancelados
+2025-11-06 12:38:53,578 - INFO - Tabla venta_detalles_cancelados lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,578 - INFO - Creando/actualizando tabla consolidada: venta_detalles_log
+2025-11-06 12:38:53,579 - INFO - Tabla venta_detalles_log lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,579 - INFO - Creando/actualizando tabla consolidada: ventas
+2025-11-06 12:38:53,579 - INFO - Tabla ventas lista para consolidación desde: origen_restaurante
+2025-11-06 12:38:53,579 - INFO - Consolidando cambios de: origen_restaurante
+2025-11-06 12:38:53,643 - INFO - Guardados 0 inserts fallidos
+2025-11-06 12:38:53,643 - INFO - Consolidación completada
+2025-11-06 12:39:19,931 - INFO - Tomando snapshot de todas las bases de datos fuente...
+2025-11-06 12:39:19,931 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:39:19,931 - INFO - Procesando fuente: origen_restaurante
+2025-11-06 12:39:20,043 - INFO - Snapshot guardado con 1 fuentes de datos
+2025-11-06 12:40:20,631 - INFO - Iniciando consolidación de cambios...
+2025-11-06 12:40:20,636 - INFO - Cargados 0 inserts fallidos
+2025-11-06 12:40:20,718 - INFO - Creando/actualizando tabla consolidada: alineacion
+2025-11-06 12:40:20,719 - INFO - Tabla alineacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,719 - INFO - Creando/actualizando tabla consolidada: catalogo_areas
+2025-11-06 12:40:20,719 - INFO - Tabla catalogo_areas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,719 - INFO - Creando/actualizando tabla consolidada: catalogo_bancos
+2025-11-06 12:40:20,719 - INFO - Tabla catalogo_bancos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,719 - INFO - Creando/actualizando tabla consolidada: catalogo_categorias
+2025-11-06 12:40:20,720 - INFO - Tabla catalogo_categorias lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,720 - INFO - Creando/actualizando tabla consolidada: catalogo_denominaciones
+2025-11-06 12:40:20,720 - INFO - Tabla catalogo_denominaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,720 - INFO - Creando/actualizando tabla consolidada: catalogo_folios
+2025-11-06 12:40:20,720 - INFO - Tabla catalogo_folios lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,720 - INFO - Creando/actualizando tabla consolidada: catalogo_promos
+2025-11-06 12:40:20,721 - INFO - Tabla catalogo_promos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,721 - INFO - Creando/actualizando tabla consolidada: catalogo_tarjetas
+2025-11-06 12:40:20,721 - INFO - Tabla catalogo_tarjetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,721 - INFO - Creando/actualizando tabla consolidada: clientes_facturacion
+2025-11-06 12:40:20,721 - INFO - Tabla clientes_facturacion lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,721 - INFO - Creando/actualizando tabla consolidada: conekta_events
+2025-11-06 12:40:20,721 - INFO - Tabla conekta_events lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,722 - INFO - Creando/actualizando tabla consolidada: conekta_payments
+2025-11-06 12:40:20,722 - INFO - Tabla conekta_payments lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,722 - INFO - Creando/actualizando tabla consolidada: corte_caja
+2025-11-06 12:40:20,722 - INFO - Tabla corte_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,722 - INFO - Creando/actualizando tabla consolidada: corte_caja_historial
+2025-11-06 12:40:20,722 - INFO - Tabla corte_caja_historial lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,722 - INFO - Creando/actualizando tabla consolidada: cortes_almacen
+2025-11-06 12:40:20,723 - INFO - Tabla cortes_almacen lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,723 - INFO - Creando/actualizando tabla consolidada: cortes_almacen_detalle
+2025-11-06 12:40:20,723 - INFO - Tabla cortes_almacen_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,723 - INFO - Creando/actualizando tabla consolidada: desglose_corte
+2025-11-06 12:40:20,723 - INFO - Tabla desglose_corte lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,723 - INFO - Creando/actualizando tabla consolidada: entradas_detalle
+2025-11-06 12:40:20,723 - INFO - Tabla entradas_detalle lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,723 - INFO - Creando/actualizando tabla consolidada: entradas_insumo
+2025-11-06 12:40:20,724 - INFO - Tabla entradas_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,724 - INFO - Creando/actualizando tabla consolidada: factura_detalles
+2025-11-06 12:40:20,724 - INFO - Tabla factura_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,724 - INFO - Creando/actualizando tabla consolidada: factura_tickets
+2025-11-06 12:40:20,724 - INFO - Tabla factura_tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,724 - INFO - Creando/actualizando tabla consolidada: facturas
+2025-11-06 12:40:20,725 - INFO - Tabla facturas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,725 - INFO - Creando/actualizando tabla consolidada: fondo
+2025-11-06 12:40:20,725 - INFO - Tabla fondo lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,725 - INFO - Creando/actualizando tabla consolidada: horarios
+2025-11-06 12:40:20,725 - INFO - Tabla horarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,725 - INFO - Creando/actualizando tabla consolidada: insumos
+2025-11-06 12:40:20,725 - INFO - Tabla insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,725 - INFO - Creando/actualizando tabla consolidada: log_asignaciones_mesas
+2025-11-06 12:40:20,726 - INFO - Tabla log_asignaciones_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,726 - INFO - Creando/actualizando tabla consolidada: log_cancelaciones
+2025-11-06 12:40:20,726 - INFO - Tabla log_cancelaciones lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,726 - INFO - Creando/actualizando tabla consolidada: log_mesas
+2025-11-06 12:40:20,726 - INFO - Tabla log_mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,726 - INFO - Creando/actualizando tabla consolidada: logs_accion
+2025-11-06 12:40:20,726 - INFO - Tabla logs_accion lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,726 - INFO - Creando/actualizando tabla consolidada: menu_dia
+2025-11-06 12:40:20,727 - INFO - Tabla menu_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,727 - INFO - Creando/actualizando tabla consolidada: mesas
+2025-11-06 12:40:20,727 - INFO - Tabla mesas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,727 - INFO - Creando/actualizando tabla consolidada: movimientos_caja
+2025-11-06 12:40:20,727 - INFO - Tabla movimientos_caja lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,727 - INFO - Creando/actualizando tabla consolidada: movimientos_insumos
+2025-11-06 12:40:20,728 - INFO - Tabla movimientos_insumos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,728 - INFO - Creando/actualizando tabla consolidada: ofertas_dia
+2025-11-06 12:40:20,728 - INFO - Tabla ofertas_dia lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,728 - INFO - Creando/actualizando tabla consolidada: productos
+2025-11-06 12:40:20,728 - INFO - Tabla productos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,728 - INFO - Creando/actualizando tabla consolidada: proveedores
+2025-11-06 12:40:20,728 - INFO - Tabla proveedores lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,728 - INFO - Creando/actualizando tabla consolidada: qrs_insumo
+2025-11-06 12:40:20,729 - INFO - Tabla qrs_insumo lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,729 - INFO - Creando/actualizando tabla consolidada: recetas
+2025-11-06 12:40:20,729 - INFO - Tabla recetas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,729 - INFO - Creando/actualizando tabla consolidada: repartidores
+2025-11-06 12:40:20,729 - INFO - Tabla repartidores lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,729 - INFO - Creando/actualizando tabla consolidada: rutas
+2025-11-06 12:40:20,729 - INFO - Tabla rutas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,730 - INFO - Creando/actualizando tabla consolidada: sedes
+2025-11-06 12:40:20,730 - INFO - Tabla sedes lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,730 - INFO - Creando/actualizando tabla consolidada: ticket_descuentos
+2025-11-06 12:40:20,730 - INFO - Tabla ticket_descuentos lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,730 - INFO - Creando/actualizando tabla consolidada: ticket_detalles
+2025-11-06 12:40:20,730 - INFO - Tabla ticket_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,730 - INFO - Creando/actualizando tabla consolidada: tickets
+2025-11-06 12:40:20,731 - INFO - Tabla tickets lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,731 - INFO - Creando/actualizando tabla consolidada: usuario_ruta
+2025-11-06 12:40:20,731 - INFO - Tabla usuario_ruta lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,731 - INFO - Creando/actualizando tabla consolidada: usuarios
+2025-11-06 12:40:20,731 - INFO - Tabla usuarios lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,731 - INFO - Creando/actualizando tabla consolidada: venta_detalles
+2025-11-06 12:40:20,731 - INFO - Tabla venta_detalles lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,731 - INFO - Creando/actualizando tabla consolidada: venta_detalles_cancelados
+2025-11-06 12:40:20,732 - INFO - Tabla venta_detalles_cancelados lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,732 - INFO - Creando/actualizando tabla consolidada: venta_detalles_log
+2025-11-06 12:40:20,732 - INFO - Tabla venta_detalles_log lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,732 - INFO - Creando/actualizando tabla consolidada: ventas
+2025-11-06 12:40:20,732 - INFO - Tabla ventas lista para consolidación desde: origen_restaurante
+2025-11-06 12:40:20,733 - INFO - Consolidando cambios de: origen_restaurante
+2025-11-06 12:40:20,821 - INFO - Insertados 1 registros consolidados en ventas
+2025-11-06 12:40:20,821 - INFO - Consolidados 1 nuevos registros de origen_restaurante.ventas
+2025-11-06 12:40:20,821 - INFO - Guardados 0 inserts fallidos
+2025-11-06 12:40:20,821 - INFO - Consolidación completada

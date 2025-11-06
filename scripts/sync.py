@@ -541,6 +541,9 @@ def main():
             print("Ejecutando modo CIERRE - Consolidando cambios...")
             consolidator.consolidate_changes()
             print("Consolidación completada exitosamente")
+        else:
+            print(f"Error: Modo '{args.modo}' no reconocido. Use 'apertura' o 'cierre'")
+            sys.exit(1)
             
     except Exception as e:
         print(f"Error durante la ejecución: {e}")

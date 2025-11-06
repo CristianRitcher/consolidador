@@ -110,16 +110,29 @@ def sync_database():
         db_origen_host = db_origen['host']
         db_origen_user = db_origen['user']
         db_origen_database = db_origen['database']
+        db_origen_port = db_origen.get('port')
+        db_origen_exp = db_origen.get('exp', 0)
 
         db_destino_host = db_destino['host']
         db_destino_user = db_destino['user']
         db_destino_database = db_destino['database']
+        db_destino_port = db_destino.get('port')
+        db_destino_exp = db_destino.get('exp', 0)
 
         # Build command for sync.py
+        # Formato esperado: host:user:password:database:exp[:port]
+        destino_config = f'{db_destino_host}:{db_destino_user}:{db_password_destino}:{db_destino_database}:{db_destino_exp}'
+        if db_destino_port:
+            destino_config += f':{db_destino_port}'
+        
+        origen_config = f'{db_origen_host}:{db_origen_user}:{db_password_origen}:{db_origen_database}:{db_origen_exp}'
+        if db_origen_port:
+            origen_config += f':{db_origen_port}'
+        
         cmd = [
             'python3', 'sync.py',
-            f'{db_destino_host}:{db_destino_user}:{db_password_destino}:{db_destino_database}',
-            '--sources', f'{db_origen_alias}={db_origen_host}:{db_origen_user}:{db_password_origen}:{db_origen_database}',
+            destino_config,
+            '--sources', f'{db_origen_alias}={origen_config}',
             '--modo', modo
         ]
 

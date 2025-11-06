@@ -16,6 +16,9 @@ const modalMessage = document.getElementById("modalMessage");
 const confirmBtn = document.getElementById("confirmBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 
+// Store current callback to avoid closure issues
+let currentConfirmCallback = null;
+
 // Load initial data and setup
 document.addEventListener('DOMContentLoaded', function() {
     cargarOpciones();
@@ -151,18 +154,36 @@ function showConfirmModal(title, message, onConfirm) {
     modalMessage.textContent = message;
     confirmModal.style.display = 'block';
     
-    // Remove previous event listeners
-    const newConfirmBtn = confirmBtn.cloneNode(true);
-    confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+    // Store the callback in a variable to avoid closure issues
+    currentConfirmCallback = onConfirm;
     
-    newConfirmBtn.addEventListener('click', () => {
+    // Remove all existing event listeners by cloning and replacing
+    const oldBtn = document.getElementById("confirmBtn");
+    const newConfirmBtn = oldBtn.cloneNode(true);
+    oldBtn.parentNode.replaceChild(newConfirmBtn, oldBtn);
+    
+    // Add event listener to the new button
+    newConfirmBtn.addEventListener('click', function handleConfirmClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
         confirmModal.style.display = 'none';
-        onConfirm();
+        console.log('Modal confirm clicked, executing callback for:', title);
+        
+        // Execute the stored callback
+        if (currentConfirmCallback && typeof currentConfirmCallback === 'function') {
+            const callbackToExecute = currentConfirmCallback;
+            currentConfirmCallback = null; // Clear callback after storing
+            callbackToExecute();
+        }
     });
+    
+    // Ensure button type is set
+    newConfirmBtn.type = 'button';
 }
 
 // Confirmation functions
 function confirmarApertura() {
+    console.log('confirmarApertura called');
     if (!dbOrigenSelect.value || !dbDestinoSelect.value) {
         showNotification("Por favor seleccione las bases de datos de origen y destino", "error");
         return;
@@ -171,11 +192,15 @@ function confirmarApertura() {
     showConfirmModal(
         "Confirmar Apertura", 
         "¿Está seguro que desea realizar la apertura? Esta acción tomará un snapshot de la base de datos de origen.",
-        () => apertura()
+        () => {
+            console.log('Apertura callback executed');
+            apertura();
+        }
     );
 }
 
 function confirmarCierre() {
+    console.log('confirmarCierre called');
     if (!dbOrigenSelect.value || !dbDestinoSelect.value) {
         showNotification("Por favor seleccione las bases de datos de origen y destino", "error");
         return;
@@ -184,7 +209,10 @@ function confirmarCierre() {
     showConfirmModal(
         "Confirmar Cierre", 
         "¿Está seguro que desea realizar el cierre? Esta acción consolidará los cambios en la base de datos de destino.",
-        () => cierre()
+        () => {
+            console.log('Cierre callback executed');
+            cierre();
+        }
     );
 }
 
