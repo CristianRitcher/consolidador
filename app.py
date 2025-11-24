@@ -88,8 +88,6 @@ def sync_database():
         # Extract database configurations
         db_origen = data.get('db_origen', {})
         db_destino = data.get('db_destino', {})
-        db_password_origen = data.get('db_password_origen', '')
-        db_password_destino = data.get('db_password_destino', '')
 
         # Validate database configurations
         required_fields = ['host', 'user', 'database']
@@ -112,22 +110,26 @@ def sync_database():
         db_origen_database = db_origen['database']
         db_origen_port = db_origen.get('port')
         db_origen_exp = db_origen.get('exp', 0)
+        db_origen_password = db_origen.get('password', '')
+        db_origen_decrypted_password = decrypt_password(db_origen_password)
 
         db_destino_host = db_destino['host']
         db_destino_user = db_destino['user']
         db_destino_database = db_destino['database']
         db_destino_port = db_destino.get('port')
         db_destino_exp = db_destino.get('exp', 0)
+        db_destino_password = db_destino.get('password', '')
+        db_destino_decrypted_password = decrypt_password(db_destino_password)
 
         # Build command for sync.py
         # Formato esperado: host:user:password:database:exp[:port]
-        destino_config = f'{db_destino_host}:{db_destino_user}:{db_password_destino}:{db_destino_database}:{db_destino_exp}'
-        if db_destino_port:
-            destino_config += f':{db_destino_port}'
-        
-        origen_config = f'{db_origen_host}:{db_origen_user}:{db_password_origen}:{db_origen_database}:{db_origen_exp}'
+        origen_config = f'{db_origen_host}:{db_origen_user}:{db_origen_decrypted_password}:{db_origen_database}:{db_origen_exp}'
         if db_origen_port:
             origen_config += f':{db_origen_port}'
+
+        destino_config = f'{db_destino_host}:{db_destino_user}:{db_destino_decrypted_password}:{db_destino_database}:{db_destino_exp}'
+        if db_destino_port:
+            destino_config += f':{db_destino_port}'
         
         cmd = [
             'python3', 'sync.py',

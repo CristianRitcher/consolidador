@@ -257,8 +257,6 @@ const apertura = async () => {
         
         const post_json = {
             "modo": "apertura",
-            "db_password_origen": document.getElementById("db_password_origen").value,
-            "db_password_destino": document.getElementById("db_password_destino").value,
             "db_origen": origen,
             "db_destino": destino
         };
@@ -305,8 +303,6 @@ const cierre = async () => {
         
         const post_json = {
             "modo": "cierre",
-            "db_password_origen": document.getElementById("db_password_origen").value,
-            "db_password_destino": document.getElementById("db_password_destino").value,
             "db_origen": origen,
             "db_destino": destino
         };
