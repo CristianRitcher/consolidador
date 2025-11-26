@@ -394,6 +394,27 @@ class MySQLDBConsolidator:
                 columns = list(insert_data.keys())
                 placeholders = ','.join(['%s' for _ in columns])
                 values = [insert_data[col] for col in columns]
+
+                if source_config['exp'] == 1:
+                    with open(f"../json/databases.json", "r") as f:
+                        data = json.load(f)
+                    for source in data['db_origenes']:
+                        if source['exp'] == 2:
+                            secondary_source_conn = self.get_db_connection(source)
+                            cursor = secondary_source_conn.cursor(dictionary=True)
+                    if record['id'] is not None:
+                        query = f"SELECT * FROM `{table_name}` WHERE `id` = {record['id']}"
+                        cursor.execute(query)
+                        result = cursor.fetchone()
+                        if result:
+                            continue
+                        else:
+                            query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
+                            cursor.execute(query, values)
+                            conn.commit()
+                            cursor.commit()
+                            cursor.close()
+                        break
                 
                 query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
                 
@@ -494,19 +515,20 @@ def parse_mysql_config(config_string: str, alias: str = None) -> Dict:
         'user': parts[1],
         'password': parts[2],
         'database': parts[3],
+        'exp': parts[4],
         'alias': alias or f"{parts[0]}_{parts[3]}"
     }
     
-    if len(parts) >= 5:
-        config['port'] = int(parts[4])
+    if len(parts) >= 6:
+        config['port'] = int(parts[5])
     
     return config
 
 def main():
     parser = argparse.ArgumentParser(description='Consolidador de múltiples bases de datos MySQL')
-    parser.add_argument('target', help='Base de datos de destino: host:user:password:database[:port]')
+    parser.add_argument('target', help='Base de datos de destino: host:user:password:database:exp[:port]')
     parser.add_argument('--sources', nargs='+', required=True,
-                       help='Bases de datos fuente: alias1=host:user:password:database[:port]')
+                       help='Bases de datos fuente: alias1=host:user:password:database:exp[:port]')
     parser.add_argument('--modo', choices=['apertura', 'cierre'], required=True,
                        help='Modo de operación: apertura (snapshot) o cierre (consolidation)')
     parser.add_argument('--log-file', default='../log/consolidation_failures.json',
