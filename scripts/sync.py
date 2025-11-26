@@ -402,19 +402,31 @@ class MySQLDBConsolidator:
                         if source['exp'] == 2:
                             secondary_source_conn = self.get_db_connection(source)
                             cursor = secondary_source_conn.cursor(dictionary=True)
+                        else:
+                            continue
                     if record['id'] is not None:
                         query = f"SELECT * FROM `{table_name}` WHERE `id` = {record['id']}"
                         cursor.execute(query)
                         result = cursor.fetchone()
                         if result:
-                            continue
-                        else:
                             query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
                             cursor.execute(query, values)
                             conn.commit()
                             cursor.commit()
                             cursor.close()
-                        break
+                            successful_inserts += 1
+                        else:
+                            continue
+                        continue
+                    else:
+                        query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
+                        
+                        cursor = conn.cursor()
+                        cursor.execute(query, values)
+                        conn.commit()
+                        cursor.close()
+                        
+                        successful_inserts += 1
                 
                 query = f"INSERT INTO `{table_name}` (`{'`, `'.join(columns)}`) VALUES ({placeholders})"
                 
